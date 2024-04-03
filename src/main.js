@@ -88,7 +88,6 @@ async function onLoadMoreClick() {
         console.log(err);
     }
    
-   
     lightbox.refresh();
  
     checkBtnLoadMoreStatus();
