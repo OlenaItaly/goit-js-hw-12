@@ -36,12 +36,15 @@
 .load-more {
   display: block;
   margin: 0 auto;
+  margin-top: 20px;
 }
 
 .load-more.is-hidden {
   display: none;
 }
-
+.is-hidden {
+  display: none;
+}
 .search-btn:hover,
 .search-btn:focus,
 .load-more:hover,

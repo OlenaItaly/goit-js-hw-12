@@ -16,6 +16,7 @@ function imageTemplate(data) {
             width="360"
             height="200"
             class="gallery-img"
+            loading="lazy"
         />
         <ul class="gallery-descript">
         <li class="gallery-descript__item"><p class="gallery-descript__p">likes</p> ${likes}</li>
@@ -30,3 +31,4 @@ function imageTemplate(data) {
 export function imagesTemplate(arr) {
   return arr.map(imageTemplate).join('');
 }
+
