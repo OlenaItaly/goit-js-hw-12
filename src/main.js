@@ -42,6 +42,7 @@ async function handlerSubmit(event) {
             position: "topRight",
             message: "INPUT SEARCH"
         })
+        hiddenLoadMore();
         return
     }
    
@@ -57,8 +58,9 @@ async function handlerSubmit(event) {
                 position: "topRight",
                 message: "Sorry, there are no images matching your search query. Please try again!"
             });
-            
+            hiddenLoadMore();
             loaderEl.classList.add('is-hidden');
+            form.reset();
             return
         }
        
