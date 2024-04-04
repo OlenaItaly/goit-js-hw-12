@@ -13,6 +13,7 @@ const form = document.querySelector('.js-search-form');
 const listElement = document.querySelector('.js-gallery');
 const loaderEl = document.querySelector('.loader');
 const btnLoadMore = document.querySelector('.js-load-more');
+const endSearch = document.querySelector('.end_search')
 
 form.addEventListener('submit', handlerSubmit);
 btnLoadMore.addEventListener('click', onLoadMoreClick);
@@ -33,7 +34,7 @@ const pageSize = 15;
 
 async function handlerSubmit(event) {
     event.preventDefault()
-    
+      endSearch.classList.add('is-hidden');
      listElement.innerHTML = '';
     currentPage = 1;
     searchQuery = event.target.elements.input_search.value.trim();
@@ -110,6 +111,8 @@ function hiddenLoadMore() {
 function checkBtnLoadMoreStatus() {
     if (currentPage >= maxPage) {
         hiddenLoadMore();
+         endSearch.classList.remove('is-hidden');
+
     } else {
         showLoadMore();
     }

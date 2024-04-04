@@ -51,6 +51,14 @@
   background-color: #27ae60;
 }
 
+.end_search.is-hidden {
+  display: none;
+}
+.end_search {
+font-size: 28px;
+}
+
+
 .gallery {
   display: flex;
   flex-wrap: wrap;
